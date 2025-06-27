@@ -1,0 +1,10 @@
+---
+services:
+  budget_api:
+    build: .
+    ports:
+      - "57948:57948"
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=sqlite:///app/db.sqlite3
