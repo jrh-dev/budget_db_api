@@ -1,10 +1,12 @@
 FROM python:3.12-slim
 
+WORKDIR /app
+
 ADD requirements.txt .
 
-ADD . api
-
 RUN pip install --no-cache-dir -r requirements.txt
+
+ADD . .
 
 EXPOSE 57948
 
